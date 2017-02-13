@@ -8,24 +8,23 @@ public class UserLoginService {
 	
 	private ArrayList<User> usersAllowed = new ArrayList<User>();
 
-	public User authenticateUser(String username, String password) {
+	public boolean authenticateUser(String username, String password) {
 		
 		for(User user: usersAllowed) {
 			if(user.getUsername().equals(username)){
-				if((user.getPassword().equals(password))) {
-					return user;
+				if((String.valueOf(user.getPassword()).equals(password))) {
+					return user != null;
 				}
 			}
 		}
 		
-		return null;
+		return false;
 	}
 
 	public Object createUser(User user) {
 		
-		usersAllowed.add(user);
-		
-		return null;
+		usersAllowed.add(user);			
+		return user;	
 	}
 
 }

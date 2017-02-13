@@ -23,8 +23,7 @@ public class LoginResource {
 	public Object login(
 			@QueryParam(value = "username") String username, 
 			@QueryParam(value = "password") String password) {
-		loginService.authenticateUser(username, password);
-		return "hi " + username;
+		return loginService.authenticateUser(username, password);
 	}
 	
 	@POST
