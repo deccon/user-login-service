@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<dropwizard.version>0.9.2</dropwizard.version>
 		<guice.version>3.0</guice.version>
-		<junit.version>4.9</junit.version>
+		<junit.version>4.13.1</junit.version>
 	</properties>
 
 	<dependencies>
